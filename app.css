@@ -976,6 +976,26 @@ section {
   font-size: 0.85rem;
 }
 
+.footer__note {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  line-height: 1.7;
+}
+
+.footer__note a {
+  color: var(--ocean-300);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.footer__note a:hover {
+  color: var(--teal-400);
+}
+
 /* ── Animations ── */
 .fade-up {
   opacity: 0;
