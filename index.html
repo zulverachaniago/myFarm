@@ -8,6 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    (function () {
+      const theme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
   <link rel="stylesheet" href="app.css" />
 </head>
 <body>
@@ -27,7 +33,13 @@
         <li><a href="#keunggulan">Keunggulan</a></li>
         <li><a href="#proses">Proses</a></li>
       </ul>
-      <a href="https://wa.me/6281294484677" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Pesan Sekarang</a>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti tema">
+          <span class="theme-toggle__icon theme-toggle__icon--light" aria-hidden="true">☀️</span>
+          <span class="theme-toggle__icon theme-toggle__icon--dark" aria-hidden="true">🌙</span>
+        </button>
+        <a href="https://wa.me/6281294484677" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Pesan Sekarang</a>
+      </div>
       <button class="nav__toggle" id="navToggle" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -108,7 +120,7 @@
     </div>
     <div class="hero__waves">
       <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none">
-        <path d="M0 60C240 100 480 20 720 60C960 100 1200 20 1440 60V120H0V60Z" fill="white"/>
+        <path class="hero__wave-path" d="M0 60C240 100 480 20 720 60C960 100 1200 20 1440 60V120H0V60Z" />
       </svg>
     </div>
   </section>
